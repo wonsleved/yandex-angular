@@ -1,0 +1,21 @@
+
+
+.columns {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: 8px;
+
+  &__main-content {
+    margin-right: 8px;
+    flex-grow: 1;
+  }
+
+  &__col:not(:first-child) {
+    @media (max-width: 850px) {
+      display: none;
+    }
+  }
+
+
+}

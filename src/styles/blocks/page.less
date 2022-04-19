@@ -1,0 +1,63 @@
+@import "fonts";
+@import "colors";
+@import "variables";
+
+.page {
+  @page-min-height: 100vh;
+  @page-min-width: 335px;
+  @base-font-size: 20px;
+  width: 100%;
+  z-index: 10;
+  background-image: linear-gradient(to bottom, #f9f9f8 10%, #f3f3f2);
+  overflow: auto;
+
+  background-color: @main-white;
+  min-height: @page-min-height;
+  min-width: @page-min-width;
+  font-size: @base-font-size;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+
+  &__header {
+    position: relative;
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+  }
+
+  &__aside-content {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+  }
+
+  &__main {
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding-right: 17px;
+    padding-left: 20px;
+    width: 941px;
+    min-width: 378px;
+
+    @media (max-width: 1400px) {
+      padding-right: 165px;
+    }
+
+    @media (max-width: 1200px) {
+      width: 758px;
+    }
+
+    @media (max-width: 1040px) {
+      padding-right: 0;
+    }
+
+    @media (max-width: 850px) {
+      width: 90vw;
+    }
+  }
+
+  &__main {
+  }
+}

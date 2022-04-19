@@ -1,0 +1,24 @@
+<nav class="services-content">
+  <ul class="services-content__services-list services-list">
+    <li
+      class="services-list__service"
+      *ngFor="let service of services"
+      >
+      <a href="{{service.link}}" class="services-list__service-link _hover-up link _text">
+        <span class="services-list__service-icon {{ service.iconClass }}"></span>
+        <span class="services-list__service-name">{{ service.name }}</span>
+      </a>
+    </li>
+  </ul>
+
+  <a href="#" class="services-content__more-services more-services _hover-up link _text">
+    <div class="more-services__etc">
+      <div class="more-services__etc-service etc-icon-1"></div>
+      <div class="more-services__etc-service etc-icon-2"></div>
+      <div class="more-services__etc-service etc-icon-3"></div>
+      <div class="more-services__etc-service etc-icon-4"></div>
+    </div>
+    <span class="more-services__text">ещё</span>
+  </a>
+</nav>
+

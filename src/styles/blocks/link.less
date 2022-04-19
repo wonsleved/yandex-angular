@@ -1,0 +1,20 @@
+@import "colors";
+
+.link {
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.15s ease-out;
+  opacity: 0.24;
+
+  &:hover {
+    opacity: 0.32;
+  }
+
+  &._text {
+    opacity: 1;
+    &:hover {
+      opacity: 1;
+      color: @link-color!important;
+    }
+  }
+}

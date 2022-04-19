@@ -1,0 +1,27 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.size(@width: auto, @height: auto) {
+  width: @width;
+  height: @height;
+}
+
+.text-format(
+  @size: 0.8em,
+  @weight: 700,
+  @line-height: 1.1em
+) {
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @line-height;
+}
+
+.flex(@align-items: initial, @justify-content: initial) {
+  display: flex;
+  align-items: @align-items;
+  justify-content: @justify-content;
+}
+

@@ -1,0 +1,110 @@
+.widgets {
+  min-width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
+}
+
+.widget-content {
+  display: flex;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+
+  &__picture {
+    display: block;
+    background-size: 100% 100%;
+    margin-right: 8px;
+  }
+
+  &__value {
+    font-size: 2em;
+    vertical-align: bottom;
+  }
+
+  &__weather-forecast {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.7em;
+    white-space: nowrap;
+  }
+
+  &__traffic-block {
+    font-size: 0.6em;
+    margin-right: 10px;
+  }
+
+  &__traffic-forecast {
+    display: flex;
+  }
+
+  &__traffic-time {
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 2px;
+    text-align: center;
+  }
+
+  &__traffic-count {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border: 2px solid green;
+    border-radius: 50%;
+  }
+
+  &__traffic-picture {
+    width: 38px;
+    height: 35px;
+  }
+
+  &__weather-picture {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.stocks {
+  &__item {
+    position: relative;
+    display: flex;
+    font-size: 0.7em;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  &-block {
+    &__main {
+      font-weight: 600;
+    }
+
+    &__additional {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &-graph {
+    padding: 5px;
+    position: absolute;
+    left: 92px;
+
+    &__image {
+      background-image: url('https://avatars.mds.yandex.net/get-stocks/1597528/8b3539f6-e39f-49ee-917f-9944f8851296_1.png/3');
+      flex: 0 0 auto;
+      width: 82px;
+      height: 24px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+

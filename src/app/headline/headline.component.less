@@ -1,0 +1,66 @@
+@import "colors";
+@import "mixins";
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6px 0 20px;
+  margin: 5px 220px 0 auto;
+
+  @media (max-width: 1600px) {
+    margin-right: 200px;
+  }
+
+  @media (max-width: 1040px) {
+    margin-right: 0;
+  }
+
+  &__left-corner {
+    display: flex;
+    flex: 0.05 1 auto;
+    flex-shrink: 1;
+    align-items: baseline;
+    color: @gray;
+    .text-format(0.75em);
+  }
+
+  &__geo-icon {
+    display: inline-block;
+    .size(14px, 14px);
+    margin-top: -4px;
+    margin-right: 4px;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &__city {
+    display: inline-block;
+    padding-right: 16px;
+    .text-format(0.8em, 700, 42px);
+  }
+
+  &__city-name {
+    color: inherit;
+  }
+
+  &__data-time {
+    .text-format(0.8em, 500);
+    padding-right: 24px;
+  }
+
+  &__right-corner {
+    display: flex;
+    padding-left: 6px;
+  }
+
+  &__bar-item {
+    .size(36px, 36px);
+    margin-left: 6px;
+    .center;
+  }
+
+  &__bar-item-cart {
+    background-repeat: no-repeat;
+    background-position: center 8px;
+  }
+}

@@ -1,0 +1,105 @@
+<div class="page-content">
+
+  <app-plate>
+    <div class="info-block">
+      <header class="info-block__header">
+        <div class="info-block__header-icon ya-news-main-icon"></div>
+        <h1 class="info-block__header-title">
+          <a href="#" class="link _text">Сейчас в СМИ</a>
+        </h1>
+        <h1 class="info-block__header-title _color-gray">
+          <a href="#" class="link _text">в Москве</a>
+        </h1>
+        <h1 class="info-block__header-title _color-orange">
+          <a href="#" class="link _text">Коронавирус</a>
+        </h1>
+        <button class="info-block__options options-icon"></button>
+      </header>
+
+      <ul class="news-list">
+        <li
+          *ngFor="let news of newsList"
+          class="news-list__item"
+        >
+          <a href="{{ news.link }}" class="link _text">
+            <span class="news-list__item-icon {{news.iconClass}}"></span>
+            <span class="news-list__item-title">
+            {{ news.content }}
+          </span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </app-plate>
+
+  <app-plate *ngFor="let content of contentList">
+
+    <header class="sm-header">
+      <a href="#" class="{{ content.channelInfo.iconClass }} sm-header__channel-icon"></a>
+
+      <div class="sm-header__info">
+        <div class="sm-header__channel">
+          <a href="#" class="sm-header__channel-name"> {{ content.channelInfo.name }} </a>
+          <span>•</span>
+          <button class="sm-header__button subscribe-button">Подписаться</button>
+        </div>
+        <a href="#" class="sm-header__channel-subs">
+          {{ content.channelInfo.subscribersAmount }} тыс. подписчиков
+        </a>
+      </div>
+      <button class="sm-header__options options-icon"></button>
+    </header>
+
+    <div class="sm-main">
+      <a href="#" class="sm-main__content">
+        <video
+          poster="{{ content.videoInfo.posterLink }}"
+          loop
+          controls
+          class="sm-main__content-video"
+          [muted]="'muted'"
+          autoplay
+        >
+          <source
+            src="{{ content.videoInfo.link }}"
+            type="{{ content.videoInfo.type }}"
+          />
+        </video>
+      </a>
+
+      <div class="sm-main__info">
+        <a href="#" class="sm-main__title">
+          {{ content.videoInfo.title }}
+        </a>
+        <a href="#" class="sm-main__additional-info">
+          <div class="sm-main__date">{{ content.videoInfo.publishDate }}</div>
+          <span> • </span>
+          <div class="sm-main__views">{{ content.videoInfo.views }} просмотров</div>
+        </a>
+      </div>
+    </div>
+
+    <footer class="sm-footer">
+      <a class="sm-footer__comments">
+        <div class="sm-footer__comments-icons">
+          <div class="sm-footer__comments-icon"></div>
+          <div class="sm-footer__comments-icon"></div>
+        </div>
+        <div class="sm-footer__comments-total">
+          <span class="sm-footer__comments-total-number">28</span>
+          <span>комментариев</span>
+        </div>
+      </a>
+      <div class="sm-footer__actions">
+        <button class="sm-footer__action like-icon"></button>
+        <button class="sm-footer__action dislike-icon"></button>
+        <button class="sm-footer__action share-icon"></button>
+      </div>
+    </footer>
+
+  </app-plate>
+
+</div>
+
+
